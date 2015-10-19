@@ -1,13 +1,20 @@
 <article class="post">
 <header>
 <h2><a href="{{ .Permalink }}">{{ .Title }} {{ if .Draft }}:: DRAFT{{end}}</a> </h2>
-<div class="post-meta">{{ .Date.Format "Mon, Jan 2, 2006" }} - Read in {{ .ReadingTime }} Min </div>
+<div class="post-meta">
+  <span data-localize="summary.{{ .Date.Format "Monday" }}">{{.Date.Format "Monday" }}</span>,
+  {{ .Date.Format "2006-01-2" }} - <span data-localize="summary.readin">Read in</span>
+  {{ .ReadingTime }}
+  {{ if eq .ReadingTime 1 }} <span data-localize="summary.minute">minute</span>
+  {{ else }} <span data-localize="summary.minutes">minutes</span> {{end }}</div>
 </header>
 <div class="summary">
     {{ .Summary }}
 </div>
+{{ if .Truncated }}
 <footer>
-<a href='{{ .Permalink }}'><nobr>Read more →</nobr></a>
+<a href='{{ .Permalink }}'><nobr data-localize="summary.readmore">Read more →</nobr></a>
 </footer>
+{{ end }}
 </article>
 {{ partial "script.html" .}}

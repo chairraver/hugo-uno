@@ -2,8 +2,6 @@
 $(document).ready(function() {
 $("#lightGallery").lightGallery();
 var opts = { pathPrefix: "/lang", skipLanguage: /^en/ };
-$("[data-localize]").localize("post-summary", opts)
-.localize("post-single", opts)
-.localize("sidebar", opts);
+$("[data-localize]").localize("lang", opts);
 });
 </script>

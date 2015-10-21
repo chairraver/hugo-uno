@@ -4,18 +4,21 @@
 	"archive" : "Archiv"
     },
 
+    "date" : {
+       	"Monday" : "Montag",
+	"Tuesday" : "Dienstag",
+	"Wednesday" : "Mittwoch",
+	"Thursday" : "Donnerstag",
+	"Friday" : "Freitag",
+	"Saturday" : "Samstag",
+	"Sunday" : "Sonntag"
+    },
+    
     "summary" : {
 	"readmore" : "Weiterlesen →",
 	"readin" : "Gelesen in",
 	"minute" : "Minute",
-	"minutes" : "Minuten",
-	"Monday" : "Montag",
-	"Tuesday" : "Dienstag",
-	"Wednesday" : "Mittwoch",
-	"Thursday" : "Donnestag",
-	"Friday" : "Freitag",
-	"Saturday" : "Samstag",
-	"Sunday" : "Sonntag"
+	"minutes" : "Minuten"
     },
 
     "terms" : {

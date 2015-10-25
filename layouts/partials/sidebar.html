@@ -5,7 +5,7 @@
     </span>
     <header class="
         {{ if .IsNode }}
-        {{ if or (eq .URL "/post/") (in .URL "/tags/") (in .URL "/categories/") }}
+        {{ if or (eq .URL "/post/") (in .URL "/tags/") (in .URL "/categories/") (in .URL "/page/") }}
             panel-cover panel-cover--collapsed
         {{ else }}
                 panel-cover

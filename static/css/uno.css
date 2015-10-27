@@ -2311,6 +2311,23 @@ hr {
 .post p {
   margin-top: 1em;
   line-height: 1.2em; }
+.post .clearer {
+  clear: both;
+  height: 1px; }
+.post .floatright {
+  float: right;
+  margin: 0 0 10px 10px;
+  border: 1px solid #333;
+  padding: 2px;
+  background: #fff;
+  display: inline; }
+.post .floatleft {
+  float: left;
+  margin: 0 10px 10px 0;
+  border: 1px solid #333;
+  padding: 2px;
+  background: #fff;
+  display: inline; }
 
 .error-code {
   font-size: 6em; }

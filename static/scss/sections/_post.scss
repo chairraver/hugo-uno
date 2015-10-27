@@ -68,7 +68,26 @@
     margin-top:1em;
     line-height: 1.2em;
   }
-
+  .clearer {
+      clear: both;
+      height: 1px;
+  }
+  .floatright {
+      float: right;
+      margin: 0 0 10px 10px;
+      border: 1px solid #333;
+      padding: 2px;
+      background: #fff;
+      display: inline;
+  }
+  .floatleft {
+      float: left;
+      margin: 0 10px 10px 0;
+      border: 1px solid #333;
+      padding: 2px;
+      background: #fff;
+      display: inline;
+  }
 }
 
 // ------------------------------

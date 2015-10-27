@@ -1,0 +1,4 @@
+<a id="{{ .Get "id" }}" href="{{ .Get "href" }}">
+  <img src="{{ .Get "src" }}" width="{{ .Get "width" }}" heigth="{{ .Get "height" }}"
+       alt="{{ .Get "alt" }}" class="{{ .Get "class" }}" /></a>
+<script>$('#{{ .Get "id" }}').lightGallery({selector: 'this'});</script>

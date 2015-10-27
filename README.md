@@ -1,8 +1,27 @@
 hugo-uno
 ========
 
-A responsive hugo theme with awesome font's, charts and light-box galleries, the theme is based on [Uno](https://github.com/daleanthony/Uno) for ghost.
-A example site is available at [fredrikloch.me](http://fredrikloch.me)
+## My Changes
+
+* Updated lightGallery to latest and full feature version (1.2.6 as of this writing).
+* Include lightGallery Javascript by default in the `<head>`.
+* Moved the activation for lightGallery into `/layouts/partitials/script.html`.
+* Use [jquery-localize](https://github.com/coderifous/jquery-localize)
+for some minimal localization to German (located in `/static/lang`).
+* Activation of localization is also in `/layouts/partitials/script.html`.
+* Changed the date format through out to ISO 8601 (YYYY-MM-DD).
+* Used my own backgound image.
+* Update the SASS and Bourbon description with actual theme directory
+(basically removing `assets/` path component)
+* Change the `curl` invocation to write the output of the minifying
+with the `-o` flag. The output redirection causes problems on Windows (LF/CR).
+
+## Back to Fredriks Original
+
+A responsive hugo theme with awesome font's, charts and light-box
+galleries, the theme is based on
+[Uno](https://github.com/daleanthony/Uno) for ghost. A example site
+is available at [fredrikloch.me](http://fredrikloch.me)
 
 A Swedish translation is available in the branch feature/swedish
 
@@ -90,11 +109,6 @@ To add a gallery to the site we use basic html together with [lightGallery](http
         <img src="pathToThumb.jpg"></img>
     </li>
 </ul>
-
-<script src=../../js/lightGallery.min.js></script>
-<script>
-    $("#lightGallery").lightGallery();
-</script>
 ```
 A running example can be found in my short [review of hugo](http://fredrikloch.me/post/Lightbox image's and a short review of hugo/)
 ## Features
@@ -126,18 +140,16 @@ In order to develop or make changes to the theme you will need to have the sass 
 
 To check installation run the following commands from a terminal and you should see the `> cli output` but your version numbers may vary.
 
-** SASS **
+**SASS**
 ```bash
-
-sass -v
+$ sass -v
 > Sass 3.3.4 (Maptastic Maple)
 ```
 If for some reason SASS isn't installed follow the instructions from the [Sass install page](http://sass-lang.com/install)
 
-** Bourbon **
+**Bourbon**
 ```bash
-
-bourbon help
+$ bourbon help
 > Bourbon 3.1.8
 ```
 If Bourbon isn't installed follow the installation instructions on the [Bourbon website](http://bourbon.io)
@@ -146,19 +158,19 @@ Once installation is verified we will need to go mount the bourbon mixins into t
 
 From the project root run `bourbon install` with the correct path
 ```bash
-bourbon install --path assets/scss
-> bourbon files installed to assets/scss/bourbon/
+$ bourbon install --path scss
+> bourbon files installed to scss/bourbon/
 ```
 
 Now that we have the bourbon mixins inside of the `scss` src folder we can now use the sass cli command to watch the scss files for changes and recompile them.
 
 ```bash
-sass --watch assets/scss:assets/css
+$ sass --watch scss:css
 >>>> Sass is watching for changes. Press Ctrl-C to stop.
 ```
 
 To minify the css files use the following command in the assets folder
 
 ```bash
-curl -X POST -s --data-urlencode 'input@css/uno.css' http://cssminifier.com/raw > css/uno.min.css
+curl -X POST -s -o css/uno.min.css --data-urlencode 'input@css/uno.css' http://cssminifier.com/raw
 ```

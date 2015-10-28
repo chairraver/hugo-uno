@@ -1,6 +1,6 @@
 <script type="text/javascript">
 $(document).ready(function() {
-$("#lightGallery").lightGallery();
+$("#post-gallery").lightGallery({ selector : ".post-pic" });
 var opts = { pathPrefix: "/lang", skipLanguage: /^en/ };
 $("[data-localize]").localize("lang", opts);
 });

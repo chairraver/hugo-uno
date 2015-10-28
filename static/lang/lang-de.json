@@ -1,7 +1,8 @@
 {
     "sidebar" : {
 	"category" : "Kategorien",
-	"archive" : "Archiv"
+	"archive" : "Archiv",
+        "page" : "Seiten"
     },
 
     "date" : {

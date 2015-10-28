@@ -5,9 +5,9 @@
             <div class="content-wrapper__inner">
                 <div class="post">
                     <h1>{{ .Title }}</h1>
-                    <span data-localize="date.{{ .Date.Format "Monday" }}" class="post-date">
+                    <p><span data-localize="date.{{ .Date.Format "Monday" }}" class="post-date">
                       {{ .Date.Format "Monday" }}</span>,
-                    <span class="post-date">{{ .Date.Format "2006-01-2" }}</span>
+                    <span class="post-date">{{ .Date.Format "2006-01-2" }}</span></p>
                     {{ .Content }}
                 </div>
                 {{ partial "sharing.html" .}}

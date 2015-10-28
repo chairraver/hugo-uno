@@ -26,15 +26,16 @@
                 <div class="navigation-wrapper">
                     <nav class="cover-navigation cover-navigation--primary">
                         <ul class="navigation">
-                            <li class="navigation__item"><a href="{{ .Site.BaseURL }}/#blog" title="link to {{ .Site.Title }} blog" class="blog-button">Blog</a> </li>
-                            </br> {{ if .Site.Params.cv }}
-                            <li class="navigation__item"><a href="{{ .Site.Params.cv  }}" title="link to my CV " class="blog-button">CV</a> </li>
-                            </br> {{ end }} {{ if .Site.Params.tags }}
-                                <li class="navigation__item"><a href="{{ .Site.BaseURL }}/tags/" title="Tags " class="blog-button">Tags</a> </li>
-                                </br> {{ end }} {{ if .Site.Params.categories }}
-                                <li class="navigation__item"><a data-localize="sidebar.category" href="{{ .Site.BaseURL }}/categories/" title="Categories " class="blog-button">Categories</a> </li>
-                                </br> {{ end }}
-			        </ul>
+                            <li class="navigation__item"><a href="{{ .Site.BaseURL }}/#blog" title="link to {{ .Site.Title }} blog" class="blog-button">Blog</a></li><br/>
+                            <li class="navigation__item"><a data-localize="sidebar.page" href="{{ .Site.BaseURL }}/page/" title="link to {{ .Site.Title }} pages" class="blog-button">Pages</a></li><br/>
+                            {{ if .Site.Params.cv }}
+                            <li class="navigation__item"><a href="{{ .Site.Params.cv  }}" title="link to my CV " class="blog-button">CV</a></li><br/>
+                            {{ end }} {{ if .Site.Params.tags }}
+                            <li class="navigation__item"><a href="{{ .Site.BaseURL }}/tags/" title="Tags " class="blog-button">Tags</a></li><br/>
+                            {{ end }} {{ if .Site.Params.categories }}
+                            <li class="navigation__item"><a data-localize="sidebar.category" href="{{ .Site.BaseURL }}/categories/" title="Categories " class="blog-button">Categories</a></li><br/>
+                            {{ end }}
+			</ul>
                     </nav> {{ partial "social.html" . }} </div>
             </div>
         </div>
@@ -65,15 +66,16 @@
                     <div class="navigation-wrapper">
                         <nav class="cover-navigation cover-navigation--primary">
                             <ul class="navigation">
-                                <li class="navigation__item"><a href="{{ .Site.BaseURL }}/#blog" title="link to {{ .Site.Title }} blog" class="blog-button">Blog</a> </li>
-                                </br> {{ if .Site.Params.cv }}
-                                <li class="navigation__item"><a href="{{ .Site.Params.cv  }}" title="link to my CV " class="blog-button">CV</a> </li>
-                                </br> {{ end }} {{ if .Site.Params.tags }}
-                                <li class="navigation__item"><a href="{{ .Site.BaseURL }}/tags/" title="Tags " class="blog-button">Tags</a> </li>
-                                </br> {{ end }} {{ if .Site.Params.categories }}
-                                <li class="navigation__item"><a data-localize="sidebar.category" href="{{ .Site.BaseURL }}/categories/" title="Categories " class="blog-button">Categories</a> </li>
-                                </br> {{ end }}
-			        </ul>
+                                <li class="navigation__item"><a href="{{ .Site.BaseURL }}/#blog" title="link to {{ .Site.Title }} blog" class="blog-button">Blog</a></li><br/>
+                                <li class="navigation__item"><a data-localize="sidebar.page" href="{{ .Site.BaseURL }}/page/" title="link to {{ .Site.Title }} pages" class="blog-button">Pages</a></li><br/>
+                                {{ if .Site.Params.cv }}
+                                <li class="navigation__item"><a href="{{ .Site.Params.cv  }}" title="link to my CV " class="blog-button">CV</a></li><br/>
+                                {{ end }} {{ if .Site.Params.tags }}
+                                <li class="navigation__item"><a href="{{ .Site.BaseURL }}/tags/" title="Tags " class="blog-button">Tags</a></li><br/>
+                                {{ end }} {{ if .Site.Params.categories }}
+                                <li class="navigation__item"><a data-localize="sidebar.category" href="{{ .Site.BaseURL }}/categories/" title="Categories " class="blog-button">Categories</a> </li><br/>
+                                {{ end }}
+			    </ul>
                         </nav> {{ partial "social.html" . }} </div>
                 </div>
             </div>

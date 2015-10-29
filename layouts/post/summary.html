@@ -1,3 +1,4 @@
+{{/* -*- mode: web -*- */}}
 <article class="post">
 <header>
 <h2><a href="{{ .Permalink }}">{{ .Title }} {{ if .Draft }}:: DRAFT{{end}}</a> </h2>
@@ -6,15 +7,18 @@
   {{ .Date.Format "2006-01-2" }} - <span data-localize="summary.readin">Read in</span>
   {{ .ReadingTime }}
   {{ if eq .ReadingTime 1 }} <span data-localize="summary.minute">minute</span>
-  {{ else }} <span data-localize="summary.minutes">minutes</span> {{end }}</div>
+  {{ else }} <span data-localize="summary.minutes">minutes</span> {{end }}
+</div>
 </header>
 <div class="summary">
     {{ .Summary }}
 </div>
 {{ if .Truncated }}
 <footer>
-<a href='{{ .Permalink }}'><nobr data-localize="summary.readmore">Read more →</nobr></a>
+  <a href='{{ .Permalink }}'><nobr data-localize="summary.readmore">Read more →</nobr></a>
 </footer>
 {{ end }}
+{{ partial "tags.html" .}}
 </article>
 {{ partial "script.html" .}}
+ 

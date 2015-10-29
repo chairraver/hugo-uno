@@ -2277,6 +2277,9 @@ hr {
   margin: 0 0 .4em 0;
   color: #c7c7c7; }
 
+p.post-meta {
+  text-align: center; }
+
 .post-meta__date {
   margin-right: .5em; }
 

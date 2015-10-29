@@ -8,14 +8,16 @@
 }
 
 // ------------------------------
-// SINGLE POST METAß
+// SINGLE POST META
 // ------------------------------
 
 .post-meta {
   margin: 0 0 .4em 0;
   color: darken($gray, 2%);
 }
-
+p.post-meta {
+    text-align: center;
+}
 
   .post-meta__date {
     margin-right: .5em;

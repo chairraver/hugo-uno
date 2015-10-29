@@ -1,14 +1,6 @@
 @charset "UTF-8";
-@font-face {
-  font-family: 'Ubuntu', sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  src: local("Ubuntu"), local("Ubuntu"), url(../fonts/Ubuntu-Regular.ttf) format("ttf"); }
-@font-face {
-  font-family: 'Source Serif Pro', serif;
-  font-style: normal;
-  font-weight: 400;
-  src: local("Source Serif Pro"), local("Source Serif Pro"), url(../fonts/SourceSerifPro-Regular.otf) format("otf"); }
+@import url(https://fonts.googleapis.com/css?family=Nunito);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
@@ -1853,8 +1845,8 @@ html {
   max-height: 100%; }
 
 body {
-  font-family: "Ubuntu", sans-serif;
-  font-size: 1em;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.1em;
   color: #666666; }
 
 ::selection {
@@ -1881,19 +1873,19 @@ h5,
 h5 {
   margin-top: .8em;
   margin-bottom: .4em;
-  font-family: "Source Serif Pro", serif;
+  font-family: "Nunito", serif;
   font-weight: lighter;
   color: #333333;
   -webkit-font-smoothing: antialiased; }
 
 h1 {
   margin-top: 0;
-  font-size: 3.2em;
-  line-height: 1.2em;
-  letter-spacing: .05em; }
+  font-size: 2.8em;
+  line-height: 1.2em; }
 
 h2 {
-  font-size: 2.2em; }
+  font-size: 2.1em;
+  line-height: 1.2em; }
 
 h3 {
   font-size: 1.8em; }
@@ -1923,7 +1915,7 @@ blockquote {
   background: #F8F8F8;
   border: 1px solid #EEEEEE;
   border-radius: 3px;
-  font-family: "Source Serif Pro", serif;
+  font-family: "Nunito", serif;
   font-weight: lighter;
   font-style: italic;
   font-size: 1.3em;
@@ -1992,7 +1984,7 @@ pre {
   color: #999999; }
 
 .intro {
-  font-family: "Source Serif Pro", serif;
+  font-family: "Nunito", serif;
   font-size: 1.2em;
   font-weight: lighter;
   color: #999999; }
@@ -2313,7 +2305,7 @@ p.post-meta {
   margin-bottom: 1em; }
 .post p {
   margin-top: 1em;
-  line-height: 1.2em; }
+  line-height: 1.4em; }
 .post .clearer {
   clear: both;
   height: 1px; }
@@ -2356,7 +2348,7 @@ p.post-meta {
   color: #FFF; }
 
 .panel-subtitle {
-  font-family: "Source Serif Pro", serif;
+  font-family: "Nunito", serif;
   font-size: 1.2em;
   font-weight: lighter;
   letter-spacing: 3px;
@@ -2617,7 +2609,7 @@ nav {
   margin-left: .2em;
   margin-bottom: .2em;
   font-size: 1em;
-  font-family: "Ubuntu", sans-serif; }
+  font-family: "Open Sans", sans-serif; }
 
 @media all and (min-width: 1300px) {
   .content-wrapper {

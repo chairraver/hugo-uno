@@ -1,16 +1,22 @@
 @import 'bourbon/bourbon';
-@font-face {
-  font-family: 'Ubuntu', sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  src: local('Ubuntu'), local('Ubuntu'), url(../fonts/Ubuntu-Regular.ttf) format('ttf');
-}
-@font-face {
-  font-family: 'Source Serif Pro', serif;
-  font-style: normal;
-  font-weight: 400;
-  src: local('Source Serif Pro'), local('Source Serif Pro'), url(../fonts/SourceSerifPro-Regular.otf) format('otf');
-}
+//@font-face {
+//  font-family: 'Ubuntu', sans-serif;
+//  font-style: normal;
+//  font-weight: 400;
+//  src: local('Ubuntu'), local('Ubuntu'), url(../fonts/Ubuntu-Regular.ttf) format('ttf');
+//}
+//@import url(https://fonts.googleapis.com/css?family=Montserrat);
+@import url(https://fonts.googleapis.com/css?family=Nunito);
+
+//@font-face {
+//  font-family: 'Source Serif Pro', serif;
+//  font-style: normal;
+//  font-weight: 400;
+//  src: local('Source Serif Pro'), local('Source Serif Pro'), url(../fonts/SourceSerifPro-Regular.otf) format('otf');
+//}
+//@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
 // ------------------------------
 // THE BASICS
 // ------------------------------

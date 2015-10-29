@@ -17,7 +17,11 @@ $secondary-color:   #5BA4E5;
 $link-color:        $primary-color;
 $hover-color:       darken($link-color, 15%);
 
-$sans-font:        'Ubuntu', sans-serif;
-$serif-font:        'Source Serif Pro', serif;
+// $sans-font:        'Ubuntu', sans-serif;
+//$sans-font:         'Source Sans Pro', sans-serif;
+$sans-font:         'Open Sans', sans-serif;
+//$serif-font:        'Source Serif Pro', serif;
+//$serif-font:        'Montserrat', serif;
+$serif-font:        'Nunito', serif;
 
 $border-radius:     3px;

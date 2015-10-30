@@ -2027,6 +2027,9 @@ pre {
   margin: 0 10%;
   padding: 50px 0; }
 
+.meta {
+  font-size: .7em; }
+
 .footer {
   display: block;
   padding: 2em 0 0 0;
@@ -2305,7 +2308,7 @@ p.post-meta {
   margin-bottom: 1em; }
 .post p {
   margin-top: 1em;
-  line-height: 1.4em; }
+  line-height: 1.5em; }
 .post .clearer {
   clear: both;
   height: 1px; }

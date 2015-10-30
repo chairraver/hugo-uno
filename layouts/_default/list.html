@@ -9,7 +9,9 @@
                     {{range .Pages }}
                     <li>
                         <a href="{{ .Permalink }}">{{ .Title }} {{ if .GetParam "draft"}}DRAFT{{end}}</a>
-                        <div class="meta">{{ .Date.Format "Monday, January 2, 2006" }}</div>
+                        <div class="meta">
+                          <span data-localize="date.{{.Date.Format "Monday"}}">{{ .Date.Format "Monday" }}</span>, <span>{{ .Date.Format "2006-01-2" }}</span>
+                        </div>
                     </li>
                     {{ end }}
                 </ul>

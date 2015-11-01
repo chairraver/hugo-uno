@@ -8,9 +8,10 @@
                 <ul id="list">
                     {{range .Pages }}
                     <li>
-                        <a href="{{ .Permalink }}">{{ .Title }} {{ if .GetParam "draft"}}DRAFT{{end}}</a>
+                        <a target="_blank" href="{{ .Permalink }}">{{ .Title }} {{ if .GetParam "draft"}}DRAFT{{end}}</a>
                         <div class="meta">
-                          <span data-localize="date.{{.Date.Format "Monday"}}">{{ .Date.Format "Monday" }}</span>, <span>{{ .Date.Format "2006-01-2" }}</span>
+                          <span data-localize="date.{{.Date.Format "Monday"}}">{{ .Date.Format "Monday"}}</span>,
+			  <span>{{ .Date.Format "2006-01-2" }}</span>
                         </div>
                     </li>
                     {{ end }}

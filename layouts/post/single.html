@@ -5,11 +5,12 @@
       <div class="content-wrapper__inner">
         <div class="post" id="post-gallery">
           <h1>{{ .Title }}</h1>
-          <p><span data-localize="date.{{ .Date.Format "Monday" }}" class="post-date">
+          <p class="post-date"><span data-localize="date.{{ .Date.Format "Monday" }}">
             {{ .Date.Format "Monday" }}</span>,
-          <span class="post-date">{{ .Date.Format "2006-01-2" }}</span></p>
+          {{ .Date.Format "2006-01-02" }}</p>
           {{ .Content }}
         </div>
+        {{ partial "tags.html" .}}
         {{ partial "sharing.html" .}}
         {{ partial "comments.html" .}}
       </div>

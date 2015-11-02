@@ -18,7 +18,7 @@ $(document).ready(function() {
     $('.panel-cover').addClass('panel-cover--collapsed');
   }
 
-  if (window.location.pathname.substring(0, 5) == "/tag/") {
+  if (window.location.pathname.substring(0, 6) == "/page/") {
     $('.panel-cover').addClass('panel-cover--collapsed');
   }
 

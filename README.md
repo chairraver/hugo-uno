@@ -1,5 +1,10 @@
-hugo-uno
-========
+hugo-uno-chairraver
+===================
+
+A responsive hugo theme with awesome font's, charts and light-box
+galleries, the theme is based on [hugo-uno](https://github.com/SenjinDarashiva/hugo-uno)
+based on [Uno](https://github.com/daleanthony/Uno) for ghost. A example site
+is available at [ridderbusch.name](https://ridderbusch.name) (Not yet online)
 
 ## My Changes
 
@@ -15,19 +20,12 @@ for some minimal localization to German (located in `/static/lang`).
 * Activation of localization is also in `/layouts/partitials/script.html`.
 * Changed the date format through out to ISO 8601 (YYYY-MM-DD).
 * Used my own backgound image.
+* Switched to the Google fonts Nunito for headlines and Open Sans for
+  the rest.
 * Update the SASS and Bourbon description with actual theme directory
 (basically removing `assets/` path component)
 * Change the `curl` invocation to write the output of the minifying
 with the `-o` flag. The output redirection causes problems on Windows (LF/CR).
-
-## Back to Fredriks Original
-
-A responsive hugo theme with awesome font's, charts and light-box
-galleries, the theme is based on
-[Uno](https://github.com/daleanthony/Uno) for ghost. A example site
-is available at [fredrikloch.me](http://fredrikloch.me)
-
-A Swedish translation is available in the branch feature/swedish
 
 ## Usage
 The following is a short tutorial on the usage of some features in the theme.
@@ -37,13 +35,11 @@ Configuration
 To take full advantage of the features in this theme you can add variables to your site config file, the following is the example config from the example site:
 ```
 languageCode = "en-us"
-contentdir = "content"
-publishdir = "public"
 builddrafts = false
-baseurl = "http://fredrikloch.me/"
+baseurl = "https://ridderbusch.name/"
 canonifyurls = true
-title = "Fredrik Loch"
-author = "Fredrik Loch"
+title = "Frank Ridderbusch"
+author = "Frank Ridderbusch"
 copyright = "This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License."
 
 
@@ -51,16 +47,14 @@ copyright = "This work is licensed under a Creative Commons Attribution-ShareAli
    category = "categories"
    tag = "tags"
 [Params]
-  AuthorName = "Fredrik"
-  github = "Senjindarashiva"
-  bitbucket = "floch"
-  flickr = "senjin"
-  twitter = "senjindarshiva"
-  email = "fredrik.loch@outlook.com"
+  AuthorName = "Frank"
+  github = "chairraver"
+  twitter = "FRidderbusch"
+  email = "..."
   description = ""
-  cv = "/pages/cv"
-  muut = "fredrikloch"
-  linkedin = "fredrikloch"
+  cv = "..."
+  muut = "..."
+  linkedin = "..."
   cover = "/images/background-cover.jpg"
   logo = "/img/logo-1.jpg"
 ```
@@ -72,6 +66,7 @@ If you prefer to use discourse replace the "muut" line with the following(rememb
 '''
 Charts
 -
+
 To create charts I use [Chart.js](https://github.com/nnnick/Chart.js) which can be configured through basic js files. To add a chart to a post use the following short-code:
 ```
 {{% chart id="basicChart" width=860 height=400 js="../../js/chartData.js" %}}
@@ -103,18 +98,51 @@ $(function(){
 A running example can be found in my comparison between [Jekyll, Hugo and Winthersmith](http://fredrikloch.me/post/2014-08-12-Jekyll-and-its-alternatives-from-a-site-generation-point-of-view/)
 Gallery
 -
-To add a gallery to the site we use basic html together with [lightGallery](http://sachinchoolur.github.io/lightGallery/index.html) to create a responsive light-box gallery. `/layouts/_default/single.html`.
+To add a gallery to the site we use basic html together with
+[lightGallery](http://sachinchoolur.github.io/lightGallery/index.html)
+to create a responsive light-box gallery.
+
+Within `/layouts/_default/single.html` the `<div>` with class `post`,
+which basically wraps the actual content of the post also has the ID
+`#post-gallery`. Each individual image is marked with class
+`post-pic`. 
+
 ```
-<ul style="list-style: none;" id="lightGallery">
-    <li data-src="pathToImg.jpg">
-        <img src="pathToThumb.jpg"></img>
-    </li>
-    <li data-src="pathToImg.jpg">
-        <img src="pathToThumb.jpg"></img>
-    </li>
-</ul>
+<div class="post-pic" data-src="/.../pathToImg1.jpg"
+     data-sub-html="caption for pathToImg1">
+<img src="/.../thumbnailPathToImg1.jpg" alt="..." width="xxx" height="yyy" />
+</div>
+
+<div class="post-pic" data-src="/.../pathToImg2.jpg"
+     data-sub-html="caption for pathToImg2">
+<img src="/.../thumbnailPathToImg2.jpg" alt="..." width="xxx" height="yyy" />
+</div>
 ```
-A running example can be found in my short [review of hugo](http://fredrikloch.me/post/Lightbox image's and a short review of hugo/)
+
+The lightGallery is then actually activated through the following
+Javascript fragment in `/layout/partials/script.html`.
+
+```
+$("#post-gallery").lightGallery({ selector : ".post-pic" });
+```
+An example is this
+[page](https://ridderbusch.name/post/2014-10-31-nascom-circuits/). (Not
+yet online).
+
+An alternative is defined in the short codes file
+`/layouts/shortcodes/img.html`, which provides the `img`
+template. This allow the inclusion of individual images into a post.
+
+```
+{{< img id="unique ID" href="/.../pathToImg.jpg"
+src="/.../thumbnailPathToImg.jpg" width="xxx" heigth="yyy"
+alt="alt text" class="floatright" >}}
+```
+
+An example is this
+[page](https://ridderbusch.name/page/my-photo-gear/). (Not
+yet online).
+
 ## Features
 
 **Cover page**

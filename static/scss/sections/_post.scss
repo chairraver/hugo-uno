@@ -94,7 +94,7 @@ p.post-meta {
   }
 
   p {
-    margin-top:1em;
+    margin-top: 1em;
     line-height: 1.5em;
   }
   .clearer {
@@ -104,17 +104,17 @@ p.post-meta {
   .floatright {
       float: right;
       margin: 0 0 10px 10px;
-      border: 1px solid #333;
+      border: 1px solid $gray-darkest;
       padding: 2px;
-      background: #fff;
+      background: $white;
       display: inline;
   }
   .floatleft {
       float: left;
       margin: 0 10px 10px 0;
-      border: 1px solid #333;
+      border: 1px solid $gray-darkest;
       padding: 2px;
-      background: #fff;
+      background: $white;
       display: inline;
   }
 }

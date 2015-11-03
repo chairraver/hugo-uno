@@ -2331,16 +2331,16 @@ p.post-meta {
 .post .floatright {
   float: right;
   margin: 0 0 10px 10px;
-  border: 1px solid #333;
+  border: 1px solid #333333;
   padding: 2px;
-  background: #fff;
+  background: #FFFFFF;
   display: inline; }
 .post .floatleft {
   float: left;
   margin: 0 10px 10px 0;
-  border: 1px solid #333;
+  border: 1px solid #333333;
   padding: 2px;
-  background: #fff;
+  background: #FFFFFF;
   display: inline; }
 
 .error-code {

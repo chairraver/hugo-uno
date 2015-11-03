@@ -15,7 +15,7 @@
 </div>
 {{ if .Truncated }}
 <footer>
-  <a href='{{ .Permalink }}'><nobr data-localize="summary.readmore">Read more →</nobr></a>
+  <a target="_blank" href='{{ .Permalink }}'><nobr data-localize="summary.readmore">Read more →</nobr></a>
 </footer>
 {{ end }}
 {{ partial "tags.html" .}}

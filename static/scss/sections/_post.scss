@@ -63,9 +63,36 @@ p.post-meta {
     margin: 2em 0;
     border-top: 1px solid $gray-light;
   }
+
   .post-date{
     margin-bottom: 1em;
   }
+
+  table {
+      width: 85%;
+      margin: 1em auto;
+  }
+  td,
+  th {
+      padding: .2em;
+  }
+
+  tr:first-child {
+      border-bottom: 1px solid $gray-light;
+      padding-bottom: .125em
+  }
+  
+  td:first-child,
+  th:first-child {
+      width: 35%;
+      border-right: 1px solid $gray-light;
+  }
+  
+  td:last-child,
+  th:last-child {
+      width: 65%;
+  }
+
   p {
     margin-top:1em;
     line-height: 1.5em;

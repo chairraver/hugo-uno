@@ -6,6 +6,10 @@ hugo-uno
 * Updated lightGallery to latest and full feature version (1.2.6 as of this writing).
 * Include lightGallery Javascript by default in the `<head>`.
 * Moved the activation for lightGallery into `/layouts/partitials/script.html`.
+* Created a new `tags.html` partial to show tags below the posts and in
+the summary.
+* Created a new `pagination.html` partial to facilitate paging through the
+index.
 * Use [jquery-localize](https://github.com/coderifous/jquery-localize)
 for some minimal localization to German (located in `/static/lang`).
 * Activation of localization is also in `/layouts/partitials/script.html`.
@@ -99,7 +103,7 @@ $(function(){
 A running example can be found in my comparison between [Jekyll, Hugo and Winthersmith](http://fredrikloch.me/post/2014-08-12-Jekyll-and-its-alternatives-from-a-site-generation-point-of-view/)
 Gallery
 -
-To add a gallery to the site we use basic html together with [lightGallery](http://sachinchoolur.github.io/lightGallery/index.html) to create a responsive light-box gallery.
+To add a gallery to the site we use basic html together with [lightGallery](http://sachinchoolur.github.io/lightGallery/index.html) to create a responsive light-box gallery. `/layouts/_default/single.html`.
 ```
 <ul style="list-style: none;" id="lightGallery">
     <li data-src="pathToImg.jpg">
@@ -122,8 +126,8 @@ If you know HTML and CSS making modifications to the theme should be super simpl
 **Responsive**
 Hugo-Uno looks great on all devices, even those weird phablets that nobody buys.
 
-**Moot comments**
-Moot integration allows users to comment on your posts.
+**Muutt comments**
+[Muut](https://muut.com/) integration allows users to comment on your posts.
 
 **Font-awesome icons**
 For more information on available icons: [font-awesome](http://fortawesome.github.io/Font-Awesome/)
@@ -174,3 +178,8 @@ To minify the css files use the following command in the assets folder
 ```bash
 curl -X POST -s -o css/uno.min.css --data-urlencode 'input@css/uno.css' http://cssminifier.com/raw
 ```
+
+On Windows and within PowerShell you explicitly need use `curl.exe`
+(provided that you installed a `curl` program) otherwise the
+PowerShell alias `curl` will be invoked, which of course will not
+work.

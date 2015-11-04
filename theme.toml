@@ -1,14 +1,19 @@
-name = "Hugo-Uno"
+name = "Hugo-Uno-Chairraver"
 license = "Creative Commons Attribution 4.0 International"
 licenselink = "https://creativecommons.org/licenses/by/4.0/"
 description = "An elegant open source and mobile first theme"
-homepage = "https://github.com/SenjinDarashiva/hugo-uno"
+homepage = "https://github.com/chairraver/hugo-uno-chairraver"
 tags = ["Responsive", "Awesome fonts", "Chart.js", "Lightbox", "gallery"]
-features = ["blog", ]
+features = ["blog", "pages"]
 
 [author]
+    name = "Frank Ridderbusch"
+    homepage = "https://ridderbusch.name"
+
+[original]
     name = "Fredrik Loch"
     homepage = "http://fredrikloch.me"
+    repo = "https://github.com/SenjinDarashiva/hugo-uno"
 
 [original]
     author =  "daleanthony"

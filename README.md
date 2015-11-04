@@ -106,8 +106,8 @@ to create a responsive light-box gallery.
 
 Within `/layouts/_default/single.html` the `<div>` with class `post`,
 which basically wraps the actual content of the post also has the ID
-`#post-gallery`. Each individual image is marked with class
-`post-pic`. 
+`#post-gallery`. Each individual image in the post is marked with the
+class `post-pic`.
 
 ```
 <div class="post-pic" data-src="/.../pathToImg1.jpg"

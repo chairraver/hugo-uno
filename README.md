@@ -6,11 +6,12 @@ galleries, the theme is based on [hugo-uno](https://github.com/SenjinDarashiva/h
 based on [Uno](https://github.com/daleanthony/Uno) for ghost. A example site
 is available at [ridderbusch.name](https://ridderbusch.name) (Not yet online)
 
-## My Changes
+## My Changes compared to Hugo-Uno from Fredrik Loch.
 
 * Updated lightGallery to latest and full feature version (1.2.6 as of this writing).
 * Include lightGallery Javascript by default in the `<head>`.
 * Moved the activation for lightGallery into `/layouts/partitials/script.html`.
+* Include Google Analytics via `.Site.Params.google_analytics` in `config.toml`.
 * Created a new `tags.html` partial to show tags below the posts and in
 the summary.
 * Created a new `pagination.html` partial to facilitate paging through the
@@ -50,6 +51,7 @@ copyright = "This work is licensed under a Creative Commons Attribution-ShareAli
   AuthorName = "Frank"
   github = "chairraver"
   twitter = "FRidderbusch"
+  google_analytics = "..."
   email = "..."
   description = ""
   cv = "..."

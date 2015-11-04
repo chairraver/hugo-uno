@@ -5,6 +5,12 @@
     <!-- Enable responsiveness on mobile devices-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <title> {{ .Title }} &middot; {{ .Site.Title }} </title>
+    <meta name="description" content="{{ if .IsNode }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ else }}{{ with .Description }}{{ . }}{{ end }}{{ end }}" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="{{ .Title }} &middot; {{ .Site.Title }}" />
+    <meta property="og:description" content="{{ if .IsNode }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ else }}{{ with .Description }}{{ . }}{{ end }}{{ end }}" />
+
+    {{ .Hugo.Generator }}
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}/css/uno.min.css" />
     <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}/css/lightgallery.css" />

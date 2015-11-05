@@ -17,7 +17,7 @@ the summary.
 * Created a new `pagination.html` partial to facilitate paging through the
 index.
 * Use [jquery-localize](https://github.com/coderifous/jquery-localize)
-for some minimal localization to German (located in `/static/lang`).
+for some minimal localization to German (located in `/static/js/lang`).
 * Activation of localization is also in `/layouts/partitials/script.html`.
 * Changed the date format through out to ISO 8601 (YYYY-MM-DD).
 * Used my own backgound image.

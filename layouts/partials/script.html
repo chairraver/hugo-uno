@@ -2,7 +2,7 @@
 <script type="text/javascript">
 $(document).ready(function() {
 $("#post-gallery").lightGallery({ selector : ".post-pic" });
-var opts = { pathPrefix: "/lang", skipLanguage: /^en/ };
+var opts = { pathPrefix: "/js/lang", skipLanguage: /^en/ };
 $("[data-localize]").localize("lang", opts);
 });
 {{ if .Site.Params.google_analytics }}

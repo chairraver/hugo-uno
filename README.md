@@ -25,6 +25,8 @@ for some minimal localization to German (located in `/static/lang`).
   the rest.
 * Update the SASS and Bourbon description with actual theme directory
 (basically removing `assets/` path component)
+* Move the `scss` directory up one level so that `.sass-cache` and the directory
+itself are not published.
 * Change the `curl` invocation to write the output of the minifying
 with the `-o` flag. The output redirection causes problems on Windows (LF/CR).
 
@@ -188,18 +190,23 @@ $ bourbon help
 ```
 If Bourbon isn't installed follow the installation instructions on the [Bourbon website](http://bourbon.io)
 
-Once installation is verified we will need to go mount the bourbon mixins into the `scss` folder.
+Once installation is verified we will need to go mount the bourbon
+mixins into the `scss` folder.
 
-From the project root run `bourbon install` with the correct path
+From the project root run `bourbon install` with the correct path (in
+the theme main directory)
+
 ```bash
 $ bourbon install --path scss
 > bourbon files installed to scss/bourbon/
 ```
 
-Now that we have the bourbon mixins inside of the `scss` src folder we can now use the sass cli command to watch the scss files for changes and recompile them.
+Now that we have the bourbon mixins inside of the `scss` src folder we
+can now use the sass cli command to watch the scss files for changes
+and recompile them.
 
 ```bash
-$ sass --watch scss:css
+$ sass --watch scss:static/css
 >>>> Sass is watching for changes. Press Ctrl-C to stop.
 ```
 

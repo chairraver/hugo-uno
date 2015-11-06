@@ -4,7 +4,7 @@ hugo-uno-chairraver
 A responsive hugo theme with awesome font's, charts and light-box
 galleries, the theme is based on [hugo-uno](https://github.com/SenjinDarashiva/hugo-uno)
 based on [Uno](https://github.com/daleanthony/Uno) for ghost. A example site
-is available at [ridderbusch.name](https://ridderbusch.name) (Not yet online)
+is available at [ridderbusch.name](https://ridderbusch.name)
 
 ## My Changes compared to Hugo-Uno from Fredrik Loch.
 
@@ -25,8 +25,6 @@ for some minimal localization to German (located in `/static/js/lang`).
   the rest.
 * Update the SASS and Bourbon description with actual theme directory
 (basically removing `assets/` path component)
-* Move the `scss` directory up one level so that `.sass-cache` and the directory
-itself are not published.
 * Change the `curl` invocation to write the output of the minifying
 with the `-o` flag. The output redirection causes problems on Windows (LF/CR).
 
@@ -39,7 +37,7 @@ To take full advantage of the features in this theme you can add variables to yo
 ```
 languageCode = "en-us"
 builddrafts = false
-baseurl = "https://ridderbusch.name/"
+baseurl = "https://ridderbusch.name"
 canonifyurls = true
 title = "Frank Ridderbusch"
 author = "Frank Ridderbusch"
@@ -130,8 +128,7 @@ Javascript fragment in `/layout/partials/script.html`.
 $("#post-gallery").lightGallery({ selector : ".post-pic" });
 ```
 An example is this
-[page](https://ridderbusch.name/post/2014-10-31-nascom-circuits/). (Not
-yet online).
+[page](https://ridderbusch.name/post/2014-10-31-nascom-circuits/).
 
 An alternative is defined in the short codes file
 `/layouts/shortcodes/img.html`, which provides the `img`
@@ -144,8 +141,7 @@ alt="alt text" class="floatright" >}}
 ```
 
 An example is this
-[page](https://ridderbusch.name/page/my-photo-gear/). (Not
-yet online).
+[page](https://ridderbusch.name/page/my-photo-gear/).
 
 ## Features
 

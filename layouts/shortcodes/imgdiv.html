@@ -1,0 +1,9 @@
+<div class="post-pic {{ .Get "class"}}"
+     data-src="{{ .Get "href" }}"
+     {{if .Get "alt"}}data-html-sub="{{ .Get "alt"}}"{{end}}>
+  <img {{if .Get "alt"}}alt="{{.Get "alt"}}"{{end}}
+       width="{{ .Get "width"}}"
+       height="{{ .Get "height"}}"
+       src="{{ .Get "src"}}"/><br/>
+{{if .Get "alt"}}<p><em>{{.Get "alt"}}</em></p>{{end}}
+</div>

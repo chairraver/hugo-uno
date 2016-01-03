@@ -35,6 +35,8 @@
                             <li class="navigation__item"><a href="{{ .Site.BaseURL }}/tags/" title="Tags " class="blog-button">Tags</a></li><br/>
                             {{ end }} {{ if .Site.Params.categories }}
                             <li class="navigation__item"><a data-localize="sidebar.category" href="{{ .Site.BaseURL }}/categories/" title="Categories " class="blog-button">Categories</a></li><br/>
+                            {{ end }} {{ if .Site.Params.about }}
+                            <li class="navigation__item"><a href="{{ .Site.BaseURL }}/about/" title="Impressum " class="blog-button">Impressum</a></li><br/>
                             {{ end }}
 			</ul>
                     </nav> {{ partial "social.html" . }} </div>
@@ -75,7 +77,9 @@
                                 <li class="navigation__item"><a href="{{ .Site.BaseURL }}/tags/" title="Tags " class="blog-button">Tags</a></li><br/>
                                 {{ end }} {{ if .Site.Params.categories }}
                                 <li class="navigation__item"><a data-localize="sidebar.category" href="{{ .Site.BaseURL }}/categories/" title="Categories " class="blog-button">Categories</a> </li><br/>
-                                {{ end }}
+                                {{ end }} {{ if .Site.Params.about }}
+				<li class="navigation__item"><a href="{{ .Site.BaseURL }}/about/" title="Impressum " class="blog-button">Impressum</a></li><br/>
+				{{ end }}
 			    </ul>
                         </nav> {{ partial "social.html" . }} </div>
                 </div>

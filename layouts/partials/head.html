@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> {{/* -*- mode: web -*- -*- engine: go -*- */}}
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
@@ -24,4 +24,13 @@
     <script src="{{ .Site.BaseURL }}/js/jquery.localize.min.js"></script>
     <script src="{{ .Site.BaseURL }}/js/main.min.js"></script>
     <script src="{{ .Site.BaseURL }}/js/lightgallery.min.js"></script>
+    {{ if .Site.Params.cookie_consent }}
+    <!-- Begin Cookie Consent plugin by Silktide - http://silktide.com/cookieconsent -->
+    <script type="text/javascript">
+      window.cookieconsent_options = {"message":"This website uses cookies to ensure you get the best experience on our website","dismiss":"Got it!","learnMore":"More info","link":"{{ .Site.Params.cookie_consent }}","theme":"dark-floating"};
+    </script>
+
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.9/cookieconsent.min.js"></script>
+    <!-- End Cookie Consent plugin -->
+    {{ end }}
 </head>

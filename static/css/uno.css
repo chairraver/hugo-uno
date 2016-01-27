@@ -47,6 +47,11 @@ body {
   body:after {
     clear: both; }
 
+/* 2.8em */
+/* 2.1em */
+/* 1.8em */
+/* 1.4em */
+/* 1.2em */
 /*!
  *  Font Awesome 4.3.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
@@ -1880,23 +1885,23 @@ h5 {
 
 h1 {
   margin-top: 0;
-  font-size: 2.8em;
+  font-size: 2em;
   line-height: 1.2em; }
 
 h2 {
-  font-size: 2.1em;
+  font-size: 1.8em;
   line-height: 1.2em; }
 
 h3 {
-  font-size: 1.8em; }
-
-h4 {
   font-size: 1.4em; }
 
 h4 {
   font-size: 1.2em; }
 
 h5 {
+  font-size: 1.1em; }
+
+h6 {
   font-size: 1em; }
 
 p {
@@ -2342,6 +2347,16 @@ p.post-meta {
   padding: 2px;
   background: #FFFFFF;
   display: inline; }
+.post #TableOfContents li {
+  line-height: 1em;
+  font-size: smaller;
+  list-style-type: circle; }
+.post h2 {
+  border-left: 2px solid #DDDDDD;
+  padding-left: .25em; }
+.post h3 {
+  border-left: 4px solid #DDDDDD;
+  padding-left: .35em; }
 
 .error-code {
   font-size: 6em; }

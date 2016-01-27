@@ -1,20 +1,28 @@
-    {{ partial "head.html" . }}
-    <body>
-        {{ partial "sidebar.html" . }}
-        <div class="content-wrapper">
-            <div class="content-wrapper__inner">
-                <div class="post" id="post-gallery">
-                    <h1>{{ .Title }}</h1>
-                    <p class="post-date"><span data-localize="date.{{ .Date.Format "Monday" }}">
-                      {{ .Date.Format "Monday" }}</span>,
-                    {{ .Date.Format "2006-01-02" }}</p>
-                    {{ .Content }}
+{{/* -*- mode: web -*- -*- engine: go -*- */}}
+{{ partial "head.html" . }}
+<body>
+    {{ partial "sidebar.html" . }}
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner">
+            <div class="post" id="post-gallery">
+                <h1>{{ .Title }}</h1>
+                <div class="post-date">
+                    <span data-localize="date.{{ .Date.Format "Monday" }}">
+                        {{ .Date.Format "Monday" }}</span>, {{ .Date.Format "2006-01-02" }}
                 </div>
-                {{ partial "tags.html" .}}
-                {{ partial "sharing.html" .}}
-                {{ partial "comments.html" .}}
+                {{ if .Params.toc }}
+                    <div id="toc">
+                        <h3><span data-localize="single.toc">Table of Contents</h3>
+                        {{ .TableOfContents }}
+                    </div>
+                {{ end }}
+                {{ .Content }}
             </div>
+            {{ partial "tags.html" .}}
+            {{ partial "sharing.html" .}}
+            {{ partial "comments.html" .}}
         </div>
-    </body>
-    {{ partial "script.html" .}}
+    </div>
+</body>
+{{ partial "script.html" .}}
 </html>

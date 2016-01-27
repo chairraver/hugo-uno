@@ -117,6 +117,21 @@ p.post-meta {
       background: $white;
       display: inline;
   }
+  #TableOfContents {
+      li {
+          line-height: 1em;
+          font-size: smaller;
+          list-style-type: circle;
+      }
+  }
+  h2 {
+      border-left: 2px solid $gray-light;
+      padding-left: .25em;
+  }
+  h3 {
+      border-left: 4px solid $gray-light;
+      padding-left: .35em;      
+  }
 }
 
 // ------------------------------

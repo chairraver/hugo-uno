@@ -25,4 +25,8 @@
     "terms" : {
 	"Categories" : "Kategorien"
     }
+
+    "single" : {
+        "toc" : "Inhaltsverzeichnis"
+    }
 }

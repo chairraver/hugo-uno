@@ -163,6 +163,9 @@ For more information on available icons: [font-awesome](http://fortawesome.githu
 **No-JS fallback**
 While JS is widely used, some themes and websites don't provide fallback for when no JS is available (I'm looking at you [Squarespace](http://blog.squarespace.com/)). If for some weird reason a visitor has JS disabled your blog will still be usable.
 
+**.Params.toc / toc**
+Allow the creation of a table of contents by setting the variable `toc` to `true` in frontmatter.
+
 ## License
 [Creative Commons Attribution 4.0 International](http://creativecommons.org/licenses/by/4.0/)
 
@@ -202,7 +205,7 @@ can now use the sass cli command to watch the scss files for changes
 and recompile them.
 
 ```bash
-$ sass --watch scss:static/css
+$ sass --watch static/scss:static/css
 >>>> Sass is watching for changes. Press Ctrl-C to stop.
 ```
 

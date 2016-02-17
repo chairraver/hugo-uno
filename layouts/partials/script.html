@@ -1,7 +1,7 @@
 {{/* -*- mode: web -*- -*- engine: go -*- */}}
 <script type="text/javascript">
 $(document).ready(function() {
-$("#post-gallery").lightGallery({ selector : ".post-pic" });
+$("#post-gallery").lightGallery({ selector : ".post-pic", mode : "lg-fade" });
 var opts = { pathPrefix: "/js/lang", skipLanguage: /^en/ };
 $("[data-localize]").localize("lang", opts);
 });

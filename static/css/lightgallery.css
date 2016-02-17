@@ -1,6 +1,6 @@
-/*! lightgallery - v1.2.6 - 2015-10-07
+/*! lightgallery - v1.2.14 - 2016-01-18
 * http://sachinchoolur.github.io/lightGallery/
-* Copyright (c) 2015 Sachin N; Licensed Apache 2.0 */
+* Copyright (c) 2016 Sachin N; Licensed Apache 2.0 */
 @font-face {
   font-family: 'lg';
   src: url("../fonts/lg.eot?n1z373");
@@ -480,6 +480,9 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   transition: transform 0.3s ease 0s;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 .lg-outer .lg-item.lg-complete.lg-zoomable .lg-image {
   -webkit-transform: scale3d(1, 1, 1);
@@ -492,6 +495,9 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   -moz-transform-origin: 0 0;
   -ms-transform-origin: 0 0;
   transform-origin: 0 0;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 #lg-zoom-in:after {
@@ -676,7 +682,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   white-space: nowrap;
 }
 .lg-outer .lg-item {
-  background: url(../img/loading.gif) no-repeat scroll center center transparent;
+  background: url("../img/loading.gif") no-repeat scroll center center transparent;
   display: none !important;
 }
 .lg-outer.lg-css3 .lg-prev-slide, .lg-outer.lg-css3 .lg-current, .lg-outer.lg-css3 .lg-next-slide {
@@ -732,6 +738,9 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 .lg-outer .lg-empty-html {
   display: none;
 }
+.lg-outer.lg-hide-download #lg-download {
+  display: none;
+}
 
 .lg-backdrop {
   position: fixed;
@@ -757,10 +766,14 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   transition: none 0s ease 0s !important;
 }
 .lg-css3.lg-use-css3 .lg-item {
-  will-change: transform, opacity;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 .lg-css3.lg-use-left .lg-item {
-  will-change: left, opacity;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 .lg-css3.lg-fade .lg-item {
   opacity: 0;

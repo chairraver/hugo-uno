@@ -2338,15 +2338,20 @@ p.post-meta {
   margin: 0 0 10px 10px;
   border: 1px solid #333333;
   padding: 2px;
-  background: #FFFFFF;
+  background: #FFF;
   display: inline; }
-.post .floatleft {
+.post .floatleft,
+.post .floatleftnc {
   float: left;
   margin: 0 10px 10px 0;
   border: 1px solid #333333;
   padding: 2px;
-  background: #FFFFFF;
+  background: #FFF;
   display: inline; }
+.post .floatleftnc {
+  background: #000; }
+.post .floatleftnc .caption {
+  display: none; }
 .post #TableOfContents li {
   line-height: 1em;
   font-size: smaller;

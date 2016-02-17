@@ -109,13 +109,20 @@ p.post-meta {
       background: $white;
       display: inline;
   }
-  .floatleft {
+  .floatleft,
+  .floatleftnc {
       float: left;
       margin: 0 10px 10px 0;
       border: 1px solid $gray-darkest;
       padding: 2px;
       background: $white;
       display: inline;
+  }
+  .floatleftnc {
+      background: $black;
+  }
+  .floatleftnc .caption {
+      display: none;
   }
   #TableOfContents {
       li {

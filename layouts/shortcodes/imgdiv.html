@@ -1,9 +1,10 @@
-<div class="post-pic {{ .Get "class"}}"
+{{/* -*- mode: web -*- -*- engine: go -*- */}}
+<div class="post-pic {{ .Get "class" }}"
      data-src="{{ .Get "href" }}"
-     {{if .Get "alt"}}data-html-sub="{{ .Get "alt"}}"{{end}}>
+     {{if .Get "alt"}}data-html-sub="#{{ .Get "id"}}"{{end}}>
   <img {{if .Get "alt"}}alt="{{.Get "alt"}}"{{end}}
        width="{{ .Get "width"}}"
        height="{{ .Get "height"}}"
-       src="{{ .Get "src"}}"/><br/>
-{{if .Get "alt"}}<p><em>{{.Get "alt"}}</em></p>{{end}}
+       src="{{ .Get "src"}}"/>
+{{if .Get "alt"}}<p class="caption" id="{{ .Get "id" }}"><em>{{.Get "alt"}}</em></p>{{end}}
 </div>

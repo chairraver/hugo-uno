@@ -1,7 +1,7 @@
 {{/* -*- mode: web -*- -*- engine: go -*- */}}
 <div class="post-pic {{ .Get "class" }}"
      data-src="{{ .Get "href" }}"
-     {{if .Get "alt"}}data-html-sub="#{{ .Get "id"}}"{{end}}>
+     {{if .Get "alt"}}data-sub-html="#{{ .Get "id"}}"{{end}}>
   <img {{if .Get "alt"}}alt="{{.Get "alt"}}"{{end}}
        width="{{ .Get "width"}}"
        height="{{ .Get "height"}}"

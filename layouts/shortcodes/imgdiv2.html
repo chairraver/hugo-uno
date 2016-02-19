@@ -1,0 +1,10 @@
+{{/* -*- mode: web -*- -*- engine: go -*- */}}
+<div><a class="post-pic" href="{{ .Get "href" }}"
+   {{if .Get "alt"}}data-sub-html="{{ .Get "alt" }}"{{end}}>
+    <img  class="{{ .Get "class" }}"
+          {{if .Get "alt"}}alt="{{.Get "alt"}}"{{end}}
+          width="{{ .Get "width"}}" height="{{ .Get "height"}}"
+          src="{{ .Get "src"}}"/></a>
+    {{if .Get "alt"}}<p class="caption">{{.Get "alt" | safeHTML }}</p>{{end}}
+    <div class="clearer"></div>
+</div>

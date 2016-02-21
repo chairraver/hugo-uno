@@ -2306,7 +2306,7 @@ p.post-meta {
   width: 95%; }
 .post hr {
   display: block;
-  width: 30%;
+  width: 100%;
   margin: 2em 0;
   border-top: 1px solid #DDDDDD; }
 .post .post-date {
@@ -2340,18 +2340,13 @@ p.post-meta {
   padding: 2px;
   background: #FFF;
   display: inline; }
-.post .floatleft,
-.post .floatleftnc {
+.post .floatleft {
   float: left;
   margin: 0 10px 10px 0;
   border: 1px solid #333333;
   padding: 2px;
   background: #FFF;
   display: inline; }
-.post .floatleftnc {
-  background: #000; }
-.post .floatleftnc .caption {
-  display: none; }
 .post #TableOfContents li {
   line-height: 1em;
   font-size: smaller;

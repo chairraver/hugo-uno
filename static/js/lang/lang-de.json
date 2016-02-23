@@ -28,5 +28,12 @@
 
     "single" : {
         "toc" : "Inhaltsverzeichnis"
+    },
+
+    "paginate" : {
+	"page" : "Seite",
+	"newer" : "Neuer",
+	"older" : "Älter",
+	"of" : "von"
     }
 }

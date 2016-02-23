@@ -5,14 +5,15 @@
 	{{ if .Paginator.HasPrev }}
 	    <a href="{{.Paginator.Prev.URL}}{{if eq .Paginator.Prev.PageNumber 1}}#blog{{end}}"
                class="pagination__newer">
-		<i class="fa fa-angle-double-left"></i>&nbsp;Newer
+		<i class="fa fa-angle-double-left"></i>&nbsp;<span data-localize="paginate.newer">Newer</span>
 	    </a>
 	{{ end }}
-	<span class="pagination__page-number">Page {{.Paginator.PageNumber}} of {{.Paginator.TotalPages}}</span>
+	<span class="pagination__page-number"><span data-localize="paginate.page">Page</span>
+	    {{.Paginator.PageNumber}} <span data-localize="paginate.of">of</span> {{.Paginator.TotalPages}}</span>
 	{{ if .Paginator.HasNext }}
 	    <a href="{{.Paginator.Next.URL}}"
                class="pagination__older">
-		Older&nbsp;<i class="fa fa-angle-double-right"></i>
+		<span data-localize="paginate.older">Older</span>&nbsp;<i class="fa fa-angle-double-right"></i>
 	    </a>
 	{{ end }}
     </nav>

@@ -14,6 +14,9 @@
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}/css/uno.min.css" />
     <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}/css/lightgallery.min.css" />
+    {{ if .Params.video }}
+    <link  rel="stylesheet" type="text/css" href="http://vjs.zencdn.net/4.12/video-js.css"/>
+    {{ end }}
     <!-- Icons -->
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
     <link rel="shortcut icon" href="/favicon.ico">
@@ -23,6 +26,9 @@
     <script src="{{ .Site.BaseURL }}/js/jquery.min.js"></script>
     <script src="{{ .Site.BaseURL }}/js/jquery.localize.min.js"></script>
     <script src="{{ .Site.BaseURL }}/js/main.min.js"></script>
+    {{ if .Params.video }}
+    <script src="http://vjs.zencdn.net/4.12/video.js"></script>
+    {{ end }}
     <script src="{{ .Site.BaseURL }}/js/lightgallery.min.js"></script>
     <script src="{{ .Site.BaseURL }}/js/lg-video.min.js"></script>
     {{ if .Site.Params.cookie_consent }}

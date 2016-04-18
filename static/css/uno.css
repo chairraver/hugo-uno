@@ -2354,6 +2354,9 @@ p.post-meta {
 .post h2 {
   border-left: 2px solid #DDDDDD;
   padding-left: .25em; }
+.post .summary h2 {
+  border-left: 0;
+  padding-left: 0; }
 .post h3 {
   border-left: 4px solid #DDDDDD;
   padding-left: .35em; }

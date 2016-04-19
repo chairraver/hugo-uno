@@ -1,3 +1,4 @@
+{{/* -*- mode: web -*- -*- engine: go -*- */}}
 <nav class="cover-navigation navigation--social">
     <ul class="navigation"> {{ if .Site.Params.twitter }}
         <!-- Twitter -->
@@ -15,13 +16,19 @@
         <!-- Flickr -->
         <li class="navigation__item">
             <a href="http://www.flickr.com/photos/{{ .Site.Params.flickr }}/" title="{{ .Site.Params.flickr }} on flickr"> <i class='fa fa-flickr'></i> <span class="label">Flickr</span> </a>
-        </li> {{ end }} {{ if .Site.Params.linkedin }}
-        <!-- Linkedin -->
+        </li> {{ end }} {{ if .Site.Params.xing }}
+        <!-- Xing -->
+        <li class="navigation__item">
+            <a href="https://www.xing.com/profile/{{ .Site.Params.xing }}" title="Xing"> <i class='fa fa-xing'></i> <span class="label">Xing</span> </a>
+            </li> {{ end }} {{ if .Site.Params.linkedin }}
+            <!-- Linkedin -->
         <li class="navigation__item">
             <a href="http://no.linkedin.com/in/{{ .Site.Params.linkedin }}/en" title="Linkedin"> <i class='fa fa-linkedin'></i> <span class="label">Linkedin</span> </a>
-        </li> {{ end }} {{ if .Site.Params.email }}
+        </li> {{ end }}
+        <li class="navigation__item">
+            <a href="{{ .RSSlink }}" title="RSS"> <i class='fa fa-rss'></i> <span class="label">RSS</span> </a>
+        </li> {{ if .Site.Params.email }}
         <!-- Email -->
         <li class="navigation__item">
             <a href="mailto:{{ .Site.Params.email }}" title="Email {{ .Site.Params.email }}"> <i class='fa fa-envelope-o'></i> <span class="label">Email</span> </a>
-        </li> {{ end }} </ul>
-</nav>
+        </li> {{ end }} </ul></nav>

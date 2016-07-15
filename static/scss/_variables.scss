@@ -14,10 +14,12 @@ $purple:            #493252;
 $red:               #E25440;
 $slate:             #3D4260;
 
+$digitalblue:      #0067C5;
+                        
 $primary-color:     $slate;
 $secondary-color:   #5BA4E5;
 
-$link-color:        $primary-color;
+$link-color:        $digitalblue;
 $hover-color:       darken($link-color, 15%);
 
 //$sans-font:        'Ubuntu', sans-serif;

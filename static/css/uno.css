@@ -2648,6 +2648,10 @@ nav {
   margin-bottom: .2em;
   font-size: 1em;
   font-family: "Open Sans", sans-serif; }
+  .summary h2 a {
+    color: #3D4260; }
+    .summary h2 a:hover {
+      color: #003f79; }
 
 @media all and (min-width: 1300px) {
   .content-wrapper {

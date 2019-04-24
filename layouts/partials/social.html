@@ -21,14 +21,18 @@
         <li class="navigation__item">
             <a href="https://www.xing.com/profile/{{ .Site.Params.xing }}" title="Xing"> <i class='fa fa-xing'></i> <span class="label">Xing</span> </a>
             </li> {{ end }} {{ if .Site.Params.linkedin }}
-            <!-- Linkedin -->
+        <!-- Linkedin -->
         <li class="navigation__item">
             <a href="http://no.linkedin.com/in/{{ .Site.Params.linkedin }}/en" title="Linkedin"> <i class='fa fa-linkedin'></i> <span class="label">Linkedin</span> </a>
         </li> {{ end }}
-        <li class="navigation__item">
-            <a href="{{ .RSSLink }}" title="RSS"> <i class='fa fa-rss'></i> <span class="label">RSS</span> </a>
-        </li> {{ if .Site.Params.email }}
-        <!-- Email -->
+	{{ with .OutputFormats.Get "rss" -}}
+	    <li class="navigation__item">
+		{{  printf `<a href="%s" title="RSS"><i class="fa fa-rss"></i><span class="label">RSS</span></a>` .Permalink | safeHTML }}
+	    </li>
+	{{ end -}} {{ if .Site.Params.email }}
+            <!-- Email -->
         <li class="navigation__item">
             <a href="mailto:{{ .Site.Params.email }}" title="Email {{ .Site.Params.email }}"> <i class='fa fa-envelope-o'></i> <span class="label">Email</span> </a>
-        </li> {{ end }} </ul></nav>
+        </li> {{ end }}
+    </ul>
+</nav>

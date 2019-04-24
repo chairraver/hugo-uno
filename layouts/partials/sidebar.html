@@ -6,7 +6,7 @@
     </span>
     <header class="
         {{ if .IsNode }}
-		   {{ if or (eq .URL "/post/") (in .URL "/tags/") (in .URL "/categories/") (in .URL "/page/") (in .URL "/salsa/")}}
+		   {{ if or (eq .Permalink "/post/") (in .Permalink "/tags/") (in .Permalink "/categories/") (in .Permalink "/page/") (in .Permalink "/salsa/")}}
             panel-cover panel-cover--collapsed
         {{ else }}
             panel-cover
